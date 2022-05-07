@@ -1,1 +1,38 @@
-{"categories":[{"id":"5273412b-0808-4ac6-bfca-846adb7bb56f","name":"Fantastic Cotton Towels","createdAt":1651905496976,"updatedAt":1651905496976},{"id":"1c0947c3-03f2-4f12-b810-a107a8835942","name":"Gorgeous Steel Gloves","createdAt":1651905496977,"updatedAt":1651905496977},{"id":"33879341-0788-4baa-a183-dceac6acb4eb","name":"Gorgeous Cotton Car","createdAt":1651905496978,"updatedAt":1651905496978},{"id":"cdb8110f-3200-4c73-8a50-25282675e84b","name":"Unbranded Concrete Mouse","createdAt":1651905496979,"updatedAt":1651905496979},{"id":"92223dcb-cb75-41f4-984d-debfdc793a09","name":"Licensed Fresh Shirt","createdAt":1651905496980,"updatedAt":1651905496980}],"products":[],"profile":{"name":"Pro"}}
+{
+  "categories": [
+    {
+      "id": "c9d53f59-e8af-4014-bc31-3d94c848fd6a",
+      "name": "Trinh qua la dep trai",
+      "createdAt": 1651938979515,
+      "updatedAt": 1651939779549
+    },
+    {
+      "id": "a6753f93-858f-4ce3-87d6-f461967ed177",
+      "name": "Handcrafted Concrete Cheese",
+      "createdAt": 1651938979516,
+      "updatedAt": 1651938979516
+    },
+    {
+      "id": "5b5cdcf6-fdb4-47c1-84da-d12a48965e9c",
+      "name": "Incredible Frozen Shoes",
+      "createdAt": 1651938979516,
+      "updatedAt": 1651938979516
+    },
+    {
+      "id": "1baa071a-d385-4284-b705-9373f48f28ea",
+      "name": "Generic Fresh Cheese",
+      "createdAt": 1651938979517,
+      "updatedAt": 1651938979517
+    },
+    {
+      "id": "bdbf3a98-fe51-4d04-8dd1-d56bd1e3e190",
+      "name": "Practical Frozen Pizza",
+      "createdAt": 1651938979518,
+      "updatedAt": 1651938979518
+    }
+  ],
+  "products": [],
+  "profile": {
+    "name": "Pro"
+  }
+}

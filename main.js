@@ -19,12 +19,20 @@ server.use((req, res, next) => {
   if (req.method === 'POST') {
     req.body.createdAt = Date.now()
   }
+  else if(req.method === 'PATCH'){
+    req.body.updatedAt = Date.now()
+  }
   // Continue to JSON Server router
   next()
 })
 
 // Use default router
-server.use(router)
+server.use('/api', router)
 server.listen(3000, () => {
   console.log('JSON Server is running')
 })
+
+const category = {
+  "id": "eba269b5-3515-4a0c-8785-aa3e3c7701f6",
+  "name": "Licensed Metal Cheese 1234",
+}
