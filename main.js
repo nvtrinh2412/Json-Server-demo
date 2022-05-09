@@ -2,6 +2,7 @@ const jsonServer = require('json-server')
 const server = jsonServer.create()
 const router = jsonServer.router('db.json')
 const middlewares = jsonServer.defaults()
+const queryString = require('query-string')
 
 
 // Set default middlewares (logger, static, cors and no-cache)
@@ -19,20 +20,36 @@ server.use((req, res, next) => {
   if (req.method === 'POST') {
     req.body.createdAt = Date.now()
   }
-  else if(req.method === 'PATCH'){
+  else if (req.method === 'PATCH') {
     req.body.updatedAt = Date.now()
   }
   // Continue to JSON Server router
   next()
 })
 
+// In this example, returned resources will be wrapped in a body property
+router.render = (req, res) => {
+  const headers = res.getHeaders()
+  const totalCountHeaders = headers['x-total-count'];
+  // console.log(req._parsedUrl.query)
+  const queryParams = queryString.parse(req._parsedUrl.query)
+  if(req.method === 'GET' && totalCountHeaders) {
+    const result ={
+      data: res.locals.data,
+      pagination:{
+        _page: Number.parseInt(queryParams._page) ||1,
+        _limit: Number.parseInt(queryParams._limit) || 10,
+        _total: Number.parseInt(totalCountHeaders)
+      }
+    };
+    return res.jsonp(result)
+    }
+  return res.jsonp(res.locals.data)
+ 
+}
+
 // Use default router
 server.use('/api', router)
 server.listen(3000, () => {
   console.log('JSON Server is running')
 })
-
-const category = {
-  "id": "eba269b5-3515-4a0c-8785-aa3e3c7701f6",
-  "name": "Licensed Metal Cheese 1234",
-}

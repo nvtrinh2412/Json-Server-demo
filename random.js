@@ -22,19 +22,18 @@ const randomProductList = (categoryList, numberOfProducts) => {
   if(numberOfProducts<=0 || categoryList == null) return;
   let productList = [];
   for (const category of categoryList) {
-    // Array.from(new Array(numberOfProducts)).forEach(() => {
-    //   const product = {
-    //    id : faker.random.uuid(),
-    //   name : faker.commerce.productName(),
-    //   price : faker.commerce.price(),
-    //   description : faker.lorem.sentence(),
-    //   thumbnailUrl : faker.image.imageUrl(400,400),
-    //   categoryId: category.id ,
-    //   };
-    //   productList.push(product);
+    Array.from(new Array(numberOfProducts)).forEach(() => {
+      const product = {
+       id : faker.random.uuid(),
+      name : faker.commerce.productName(),
+      price : faker.commerce.price(),
+      description : faker.lorem.sentence(),
+      thumbnailUrl : faker.image.imageUrl(400,400),
+      categoryId: category.id ,
+      };
+      productList.push(product);
       
-    // })
-    console.log(category)
+    })
   
   }
   return productList
